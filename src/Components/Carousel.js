@@ -12,12 +12,10 @@ const Carousel = ({ items }) => {
       className={props.className}
       style={{
         ...props.style,
-        // display: "block",
         background: "gray",
         position: "absolute",
         top: "50%",
         left: "5px",
-        // transform: "translateY(-50%)",
         zIndex: 1,
         cursor: "pointer",
         padding: "1px",
@@ -77,10 +75,16 @@ const Carousel = ({ items }) => {
   };
   const renderIcons = () => {
     return (
-      <div className="icon-container bg-gray-300 black-25 absolute w-52 top-5 text-center  ml-5 z-10 ">
-        <FontAwesomeIcon icon={faHeart} className="mr-2" />
-        <FontAwesomeIcon icon={faSync} className="mr-2" />
-        <FontAwesomeIcon icon={faSearch} className="icon" />
+      <div>
+        
+        <div className="icon-container  absolute w-52 h-32 mt-5 text-center  ml-5 z-10 ">
+        <div className="absolute bg-black/10 inset-0">
+
+</div>
+        <FontAwesomeIcon icon={faHeart} className="mr-2 mt-14  rounded-lg p-1 bg-white" />
+        <FontAwesomeIcon icon={faSync} className="mr-2 mt-14  rounded-lg p-1 bg-white" />
+        <FontAwesomeIcon icon={faSearch} className=" mt-14  rounded-lg p-1 bg-white" />
+      </div>
       </div>
     );
   };
@@ -91,7 +95,7 @@ const Carousel = ({ items }) => {
         {items.map((item, index) => (
           <div key={item.id}>
             <div
-              className="flex ms-8"
+              className="flex ms-8 h-60 "
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
@@ -100,7 +104,7 @@ const Carousel = ({ items }) => {
                 <img className="w-52 h-32 m-5 " src={item.image} alt="" />
               </div>
               <div className="m-5 w-72">
-                <p>Rating</p>
+                {/* <p>Rating</p> */}
                 <p className="font-bold ">{item.name}</p>
                 <div className="flex">
                   <p className="text-orange-500 pb-2 pt-2 font-bold text-xl">

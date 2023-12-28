@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./SecondCarousel.css"; 
-import Carouselll from "./Carouselll";
 
 const SecondCarousel = ({ items }) => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -49,7 +48,6 @@ const SecondCarousel = ({ items }) => {
             </div>
           ))}
       </div>
-      <Carouselll></Carouselll>
     </div>
   );
 };
