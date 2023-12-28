@@ -1,0 +1,37 @@
+.carousel-container {
+  width: 500px;
+  float: right;
+}
+
+.carousel-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding-left: 26rem;
+}
+
+.bar-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #aaa;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.bar-item.active {
+  background-color: orange;
+  width: 40px;
+  height: 10px;
+  border-radius: 8px;
+}
+
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-item {
+  padding: 10px;
+  margin-bottom: 10px;
+}
